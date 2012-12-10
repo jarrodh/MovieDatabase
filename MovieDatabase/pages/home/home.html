@@ -15,6 +15,12 @@
     <script src="/js/data.js"></script>
 </head>
 <body>
+    <div id="movieListTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+        <div id="moveItemTemplate">
+            <span class="movieTitle" data-win-bind="innerText: title"></span>
+        </div>
+    </div>
+
     <!-- The content that will be loaded and displayed. -->
     <div class="fragment homepage">
         <header aria-label="Header content" role="banner">
@@ -24,8 +30,10 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <ul id="movieList">
-            </ul>
+            <div id="movieList"
+                data-win-control="WinJS.UI.ListView"
+                data-win-options="{ itemDataSource: MovieData.moviesList.dataSource, itemTemplate: select('#movieListTemplate') }">
+            </div>
         </section>
     </div>
 </body>

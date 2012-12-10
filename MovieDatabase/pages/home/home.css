@@ -2,6 +2,10 @@
     margin-left: 120px;
 }
 
+#moveItemTemplate {
+	width: 300px;
+}
+
 @media screen and (-ms-view-state: snapped) {
     .homepage section[role=main] {
         margin-left: 20px;

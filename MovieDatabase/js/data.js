@@ -8,9 +8,11 @@
         { title: "Argo", released: new Date("12 October 2012"), duration: 120 },
         { title: "Taken 2", released: new Date("12 October 2012"), duration: 92 }
     ];
-
-
+    
+    var moviesList = new WinJS.Binding.List(moviesArray);
+    
     WinJS.Namespace.define("MovieData", {
-        movies: moviesArray
+        movies: moviesArray,
+        moviesList: moviesList
     });
 })();
